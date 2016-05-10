@@ -67,12 +67,12 @@
                             <a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i>Productos <span class="fa arrow"></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{!!URL::to('productos/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                     
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Productos   </a>
+                                    <a href="{!!URL::to('productos')!!}"><i class='fa fa-list-ol fa-fw'></i> Productos   </a>
                                 </li>
                             </ul>
                         </li>

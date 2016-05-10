@@ -25,3 +25,7 @@ Route::resource('log','LogController');
 Route::get('logout','logController@logout');
 
 Route::resource('usuario','UsuarioController');
+
+//PRODUCTOS
+
+Route::resource('productos','ProductosController');

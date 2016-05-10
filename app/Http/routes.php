@@ -21,4 +21,7 @@ Route::get('reviews','FrontController@reviews');
 
 Route::get('admin','AdminController@index');
 
+Route::resource('log','LogController');
+Route::get('logout','logController@logout');
+
 Route::resource('usuario','UsuarioController');

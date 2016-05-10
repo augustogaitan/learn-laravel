@@ -2,14 +2,27 @@
 
 @section('content')
 
+@if(count($errors)>0)
+ 	<div class="alert alert-danger alert-dismissible" rol="alert">
+ 		<button type="button" class="close" data-dismiss="alert" aria-label="close">
+ 			<span aria-hidden="true">&times;</span>
+ 		</button> 
+ 		<ul>
+ 			@foreach($errors->all() as $error)
+ 			<li>{!!$error!!}</li>
+ 			@endforeach
+ 		</ul>
+	</div>
+@endif
+
 {!! Form::open(['route' => 'usuario.store','method'=>'POST']) !!}
 	<div class="form-group">
 		{!! Form::label('Nombre')!!}
-		{!! Form::text('nombre',null,array('class'=>'form-control','placeholder'=>'Ingresa el nombre de Usuario'))!!}
+		{!! Form::text('name',null,array('class'=>'form-control','placeholder'=>'Ingresa el nombre de Usuario'))!!}
 	</div>
 	<div class="form-group">
 		{!! Form::label('Correo')!!}
-		{!! Form::text('correo',null,array('class'=>'form-control','placeholder'=>'Ingresa el nombre de Usuario'))!!}
+		{!! Form::text('email',null,array('class'=>'form-control','placeholder'=>'Ingresa el nombre de Usuario'))!!}
 	</div>
 	<div class="form-group">
 		{!! Form::label('Contraseña')!!}

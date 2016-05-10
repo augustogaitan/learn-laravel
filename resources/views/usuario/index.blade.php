@@ -21,5 +21,5 @@
 	@endforeach
 	</tbody>
 </table>
-
+{!!$users->render()!!}
 @stop()

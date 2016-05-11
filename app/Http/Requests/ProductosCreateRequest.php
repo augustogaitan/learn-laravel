@@ -26,7 +26,9 @@ class ProductosCreateRequest extends Request
         return [
             'nombre'=>'required',
             'descripcion'=>'required',
-            'imagen'=>'required|mimes:png'
+            'precio'=>'required',
+            //'imagen'=>'required|mimes:png|mimes:jpeg'
+            'imagen'=>'required'
         ];
     }
 }

@@ -7,6 +7,10 @@
 {!!Form::text('descripcion',null,['class'=>'form-control','placeholder'=>'Ingrese la descripcion del producto'])!!}
 </div>
 <div class="form-group">
+{!!Form::label('precio','Precio')!!}
+{!!Form::text('precio',null,['class'=>'form-control','placeholder'=>'Ingrese el precio del producto'])!!}
+</div>
+<div class="form-group">
 {!!Form::label('imagen','Imagen Producto')!!}
 {!!Form::file('imagen',null)!!}
 </div>

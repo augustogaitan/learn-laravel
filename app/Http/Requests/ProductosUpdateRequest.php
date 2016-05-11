@@ -23,8 +23,12 @@ class ProductosUpdateRequest extends Request
      */
     public function rules()
     {
-        return [
-            //
+       return [
+            'nombre'=>'required',
+            'descripcion'=>'required',
+            'precio'=>'required',
+            //'imagen'=>'required|mimes:png|mimes:jpeg'
+            'imagen'=>'required'
         ];
     }
 }

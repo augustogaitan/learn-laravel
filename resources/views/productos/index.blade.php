@@ -6,6 +6,7 @@
 		<tr>
 			<td>Nombre</td>
 			<td>Descripcion</td>
+			<td>Precio</td>
 			<td>Imagen</td>
 			<td>Opciones</td>
 		</tr>
@@ -15,8 +16,9 @@
 		<tr>
 			<td>{{$producto->nombre}}</td>
 			<td>{{$producto->descripcion}}</td>
+			<td>{{$producto->precio}}</td>
 			<td>
-				<img src="{{$producto->imagen}}" alt="">
+				<img src="upload/{{$producto->imagen}}" alt="">
 			</td>
 			<td>
 				{!!link_to_route('productos.edit', $title = 'Editar', $parameters = $producto->id, $attributes = ['class'=>'btn btn-primary']) !!}

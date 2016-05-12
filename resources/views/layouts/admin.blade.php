@@ -77,6 +77,19 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i>Categorias <span class="fa arrow"></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('categorias/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('categorias')!!}"><i class='fa fa-list-ol fa-fw'></i> Categorias   </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>

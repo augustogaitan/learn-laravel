@@ -8,4 +8,3 @@
 	{!!Form::close()!!}
 
 @stop
-asdf

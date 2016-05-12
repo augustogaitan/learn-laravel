@@ -29,3 +29,7 @@ Route::resource('usuario','UsuarioController');
 //PRODUCTOS
 
 Route::resource('productos','ProductosController');
+
+
+//Categorias
+Route::resource('categorias','CategoriasController');

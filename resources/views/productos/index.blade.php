@@ -7,6 +7,7 @@
 			<td>Nombre</td>
 			<td>Descripcion</td>
 			<td>Precio</td>
+			<td>Categorias</td>
 			<td>Imagen</td>
 			<td>Opciones</td>
 		</tr>
@@ -17,6 +18,7 @@
 			<td>{{$producto->nombre}}</td>
 			<td>{{$producto->descripcion}}</td>
 			<td>{{$producto->precio}}</td>
+			<td>{{$producto->categoriasNombre}}</td>
 			<td>
 				<img src="upload/{{$producto->imagen}}" alt="">
 			</td>

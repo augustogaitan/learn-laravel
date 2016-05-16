@@ -8,6 +8,7 @@ use App\Http\Requests\ProductosUpdateRequest;
 
 use App\Productos;
 use Redirect;
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -20,7 +21,11 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        $productos = Productos::all();
+        //$productos = Productos::all();
+        $productos = DB::table('productos')
+            ->join('categorias', 'productos.categorias_id', '=', 'categorias.id')
+            ->select('productos.*','categorias.nombre as categoriasNombre')
+            ->get();
         return view('productos.index',compact('productos'));
     }
 
@@ -31,7 +36,10 @@ class ProductosController extends Controller
      */
     public function create()
     {
-        return view('productos.create');
+        $selectCategoria = ['categorias' => DB::table('categorias')->lists('nombre', 'id')];
+        $selectCategoria = array_merge([''=>'Seleccionar Categoria'], $selectCategoria );
+
+        return view('productos.create',compact('selectCategoria'));
     }
 
     /**
@@ -48,8 +56,8 @@ class ProductosController extends Controller
             'descripcion'=>$request['descripcion'],
             'precio'=>$request['precio'],
             'imagen'=>$request['imagen'],
+            'categorias_id'=>$request['categorias_id'],
             ]);
-
 
         return redirect('/productos')->with('message','store');
     }

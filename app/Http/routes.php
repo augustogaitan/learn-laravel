@@ -33,3 +33,13 @@ Route::resource('productos','ProductosController');
 
 //Categorias
 Route::resource('categorias','CategoriasController');
+
+
+//Clientes
+
+Route::resource('clientes','ClientesController');
+
+//factruras
+
+Route::resource('facturas','FacturasController');
+

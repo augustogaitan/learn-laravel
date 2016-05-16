@@ -12,6 +12,12 @@
     {!!Html::style('css/metisMenu.min.css')!!}
     {!!Html::style('css/sb-admin-2.css')!!}
     {!!Html::style('css/font-awesome.min.css')!!}
+    <!--{!!Html::style('css/bootstrap-modal.css')!!}-->
+    {!!Html::style('less/modals.less')!!}
+    {!!Html::style('less/type.less')!!}
+    {!!Html::style('less/close.less')!!}
+    {!!Html::style('less/scaffolding.less')!!}
+
 
 </head>
 
@@ -28,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Cinema Admin</a>
+                <a class="navbar-brand" href="index.html">Ferreteria Admin</a>
             </div>
            
 
@@ -90,6 +96,45 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i>Empleado<span class="fa arrow"></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('categorias/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('categorias')!!}"><i class='fa fa-list-ol fa-fw'></i> Empleados   </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i>Facturas <span class="fa arrow"></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('facturas/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('facturas')!!}"><i class='fa fa-list-ol fa-fw'></i> Facturas   </a>
+                                </li>
+                            </ul>
+                        </li>
+                         <li>
+                            <a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i>Clientes <span class="fa arrow"></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('clientes/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('clientes')!!}"><i class='fa fa-list-ol fa-fw'></i> Clientes   </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -124,12 +169,16 @@
         </div>
 
     </div>
-    
+
+   
+
 
     {!!Html::script('js/jquery.min.js')!!}
     {!!Html::script('js/bootstrap.min.js')!!}
     {!!Html::script('js/metisMenu.min.js')!!}
     {!!Html::script('js/sb-admin-2.js')!!}
+    {!!Html::script('js/scripts.js')!!}
+
 
 </body>
 

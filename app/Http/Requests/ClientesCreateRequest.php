@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class ProductosCreateRequest extends Request
+class ClientesCreateRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,11 +25,12 @@ class ProductosCreateRequest extends Request
     {
         return [
             'nombre'=>'required',
-            'descripcion'=>'required',
-            'precio'=>'required',
-            'categorias_id'=>'required',
-            //'imagen'=>'required|mimes:png|mimes:jpeg'
-            'imagen'=>'required'
+            'apellidos'=>'required',
+            'dni'=>'required',
+            'direccion'=>'required',
+            'ciudad'=>'required',
+            'telefono'=>'required',
+            'email'=>'required'
         ];
     }
 }

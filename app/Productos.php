@@ -11,7 +11,7 @@ class Productos extends Model
 
     protected $table = "productos";
 
-    protected $fillable = ['nombre', 'descripcion', 'precio', 'imagen'];
+    protected $fillable = ['nombre', 'descripcion', 'precio','categorias_id', 'imagen'];
 
     public function setImagenAttribute($imagen){
     	if(!empty($imagen)){

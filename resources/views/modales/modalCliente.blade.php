@@ -5,8 +5,8 @@
       <div class="modal-header"> 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> <h4 class="modal-title" id="myLargeModalLabel">Buscar Clientes</h4> 
         {!!Form::open(['route'=>'clientes.create'])!!}
-        	{!!Form::text('busqueda',null,['class'=>'form-control'])!!}
-      		{!!Form::submit('buscar',['class'=>'btn btn-primary'])!!}
+        	{!!Form::text('busqueda',null,['class'=>'form-control','id'=>'datoBusqueda'])!!}
+      		{!!Form::submit('buscar',['class'=>'btn btn-primary','id'=>'busquedaCliente'])!!}
       	{!!Form::close()!!}
       </div> 
       <div class="modal-body">

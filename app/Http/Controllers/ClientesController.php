@@ -24,7 +24,6 @@ class ClientesController extends Controller
     {
         $clientes = Clientes::all();
         return view('clientes.index',compact('clientes'));
-        //return view('modales.modalCliente',compact('clientes'));
     }
 
     /**
@@ -108,10 +107,11 @@ class ClientesController extends Controller
         //
     }
 
-    public function search(Request $request)
+    public function buscar(Request $request)
     {
     // Gets the query string from our form submission 
     $query = Request::input('search');
+    echo $query;
     // Returns an array of articles that have the query string located somewhere within 
     // our articles titles. Paginates them so we can break up lots of search results.
     $articles = DB::table('clientes')->where('nombre', 'LIKE', '%' . $query . '%')->paginate(10);
